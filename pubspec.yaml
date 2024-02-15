@@ -1,7 +1,7 @@
 name: sync_sphere
 description: "A new Flutter package project."
 version: 0.0.1
-homepage: null
+homepage: https://github.com/DarkNinja15/sync_sphere
 
 environment:
   sdk: ">=3.2.6 <4.0.0"

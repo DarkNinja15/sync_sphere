@@ -1,39 +1,48 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# sync_sphere
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A Flutter package for constant internet connectivity checking throughout the app.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Monitors internet connectivity in the background.
+- Displays a user-friendly screen when there is no internet connection.
+- Includes a retry button to recheck and restore the internet connection.
+- Customizable options for the internet connectivity screen.
 
-## Getting started
+## Getting Started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+1. Add the `sync_sphere` package to your `pubspec.yaml` file:
 
-## Usage
+```yaml
+dependencies:
+  sync_sphere: ^0.0.1```
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+2. Run pub get
+ 
+ ```flutter pub get```
 
-```dart
-const like = 'sample';
+3. import your package
+
+```
+import 'package:sync_sphere/sync_sphere.dart';
 ```
 
-## Additional information
+4. Wrap child of your MaterialApp with the SyncSphere widget
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: SyncSphere(
+        child: YourMainScreen(),
+        whenOffine: YourOfflineScreen(),
+      ),
+    );
+  }
+}
+```
