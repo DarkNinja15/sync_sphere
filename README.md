@@ -15,11 +15,14 @@ A Flutter package for constant internet connectivity checking throughout the app
 
 ```yaml
 dependencies:
-  sync_sphere: ^0.0.1```
+  sync_sphere: ^0.0.1
+```
 
 2. Run pub get
  
- ```flutter pub get```
+ ```
+ flutter pub get
+ ```
 
 3. import your package
 
@@ -29,7 +32,7 @@ import 'package:sync_sphere/sync_sphere.dart';
 
 4. Wrap child of your MaterialApp with the SyncSphere widget
 
-```dart
+```
 void main() {
   runApp(MyApp());
 }
