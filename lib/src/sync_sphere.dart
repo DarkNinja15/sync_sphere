@@ -38,7 +38,7 @@ class _SyncSphereState extends State<SyncSphere> {
       children: [
         widget.child,
         if (!_isConnected)
-          Positioned(bottom: 10, right: 10, child: buildNoInternetScreen()),
+          Positioned(bottom: 10, child: buildNoInternetScreen()),
       ],
     );
   }

@@ -15,7 +15,7 @@ A Flutter package for constant internet connectivity checking throughout the app
 
 ```yaml
 dependencies:
-  sync_sphere: ^0.0.1
+  sync_sphere: ^0.0.2
 ```
 
 2. Run pub get

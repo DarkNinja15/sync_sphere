@@ -1,6 +1,6 @@
 name: sync_sphere
 description: "Check your internet connection anytime, anywhere."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/DarkNinja15/sync_sphere
 
 environment:
