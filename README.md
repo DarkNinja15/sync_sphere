@@ -4,9 +4,8 @@ A Flutter package for constant internet connectivity checking throughout the app
 
 ## Features
 
-- Monitors internet connectivity in the background.
+- Monitors internet connectivity.
 - Displays a user-friendly screen when there is no internet connection.
-- Includes a retry button to recheck and restore the internet connection.
 - Customizable options for the internet connectivity screen.
 
 ## Getting Started
@@ -15,7 +14,7 @@ A Flutter package for constant internet connectivity checking throughout the app
 
 ```yaml
 dependencies:
-  sync_sphere: ^0.0.2
+  sync_sphere: ^0.0.3
 ```
 
 2. Run pub get
@@ -43,7 +42,26 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: SyncSphere(
         child: YourMainScreen(),
-        whenOffine: YourOfflineScreen(),
+        whenOffine: YourOfflineScreenWidget(),
+      ),
+    );
+  }
+}
+```
+
+5. You can also use the default "No internet" widget
+
+```
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: SyncSphere(
+        child: YourMainScreen(),
       ),
     );
   }

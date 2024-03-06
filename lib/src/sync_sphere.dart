@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:sync_sphere/src/containers/sync_containers.dart';
 
 class SyncSphere extends StatefulWidget {
-  const SyncSphere({super.key, required this.child, required this.whenOffine});
+  SyncSphere({super.key, required this.child, Widget? whenOffine})
+      : whenOffine =
+            whenOffine ?? SyncContainers.getContainer(ContainerType.simple);
 
   /// The widget to display when the device is online.
   final Widget child;

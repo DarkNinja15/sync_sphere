@@ -1,6 +1,9 @@
 name: sync_sphere
-description: "Check your internet connection anytime, anywhere."
-version: 0.0.2
+description: "The sync_sphere package is designed to check internet connectivity
+  throughout the app or just on a particular location in an easy way. Just wrap
+  the widget you want to listen to internet connectivity and leave the rest to
+  us."
+version: 0.0.3
 homepage: https://github.com/DarkNinja15/sync_sphere
 
 environment:
